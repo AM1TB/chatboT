@@ -31,7 +31,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 		converters.add(new MappingJackson2HttpMessageConverter());
 	}
 
-	public void addViewControllers(ViewControllerRegistry registry) {
+        @Override
+        public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("chat");
 	}
 
